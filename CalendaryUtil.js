@@ -50,6 +50,11 @@ var CalendaryUtil = {
         var b = Math.floor(a);
         return b;
     },
+    getTomorrow: function (today) {
+        var tomorrow = today;
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        return getUTCDate(tomorrow);
+    }
 };
 
 module.exports = CalendaryUtil;
